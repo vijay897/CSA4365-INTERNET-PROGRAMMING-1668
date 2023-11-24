@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management Login</title>
+    <title>Hospital Management - Additional Information</title>
     <style>
         body {
-            background-image: url('index.jpg');
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -22,14 +21,24 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #333;
         }
 
-        .login-buttons {
-            text-align: center;
-            margin-top: 20px;
+        .additional-info-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
         }
 
         button {
@@ -52,13 +61,17 @@
     <div class="container">
         <h1>Hospital Management System</h1>
 
-        <div class="login-buttons">
-            <form action="user.html" method="get">
-                <button type="submit">User Login</button>
-            </form>
-            
-            <form action="admin.html" method="get">
-                <button type="submit">Admin Login</button>
+        <!-- Additional Information Form -->
+        <div class="additional-info-form">
+            <h2>Additional Information</h2>
+            <form action="output.php" method="post">
+                <label for="userId">ID:</label>
+                <input type="text" id="Id" name="Id"required>
+
+                <label for="amount">Amount:</label>
+                <input type="text" id="Amount" name="Amount" required>
+
+                <button type="submit">Submit Additional Information</button>
             </form>
         </div>
     </div>
